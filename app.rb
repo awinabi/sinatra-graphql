@@ -2,6 +2,8 @@ require 'sinatra'
 require 'sinatra/json'
 require 'sinatra/activerecord'
 
+require_relative 'models/speaker'
+
 class ConferenceApp < Sinatra::Base
   set :database_file, 'config/database.yml'
 
