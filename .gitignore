@@ -10,3 +10,4 @@
 /test/version_tmp/
 /tmp/
 .DS_Store
+*.sqlite3

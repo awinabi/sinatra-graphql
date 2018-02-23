@@ -1,7 +1,9 @@
 require 'sinatra'
-require "sinatra/json"
+require 'sinatra/json'
+require 'sinatra/activerecord'
 
 class ConferenceApp < Sinatra::Base
+  set :database_file, 'config/database.yml'
 
   get '/' do
     'It Works!'
