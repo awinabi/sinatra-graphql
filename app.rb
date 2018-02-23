@@ -15,4 +15,9 @@ class ConferenceApp < Sinatra::Base
     message = { success: true, message: 'hello'}
     json message
   end
+
+  get '/speakers' do
+    @speakers = Speaker.all
+    json @speakers
+  end
 end
