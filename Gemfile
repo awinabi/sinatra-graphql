@@ -8,4 +8,5 @@ gem 'rake'
 
 group :development do
   gem 'sqlite3'
+  gem 'pry'
 end
