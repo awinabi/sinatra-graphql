@@ -1,8 +1,8 @@
 require 'graphql'
-require_relative 'mutations/speaker_mutations'
+require_relative 'mutations/create_speaker'
 
-MutationType = GraphQL::ObjectType.define do
-  name 'Mutation'
+class MutationType < GraphQL::Schema::Object
+  description "The mutation root of this schema"
 
-  field :createSpeaker, field: SpeakerMutations::Create.field
+  field :createSpeaker, mutation: Mutations::CreateSpeaker
 end

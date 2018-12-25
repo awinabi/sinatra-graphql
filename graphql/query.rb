@@ -1,14 +1,14 @@
 require 'graphql'
-require_relative 'types/speaker_type'
+require_relative 'types/speaker'
 
-QueryType = GraphQL::ObjectType.define do
-  name "Query"
+class QueryType < GraphQL::Schema::Object
   description "The query root of this schema"
 
-  field :speakers, types[Types::SpeakerType] do
-    description "Get a list of speakers"
-    resolve ->(_obj, _args, _ctx) {
-      Speaker.all
-    }
+  field :speakers, [Types::Speaker], null: false do
+    description 'Get all speakers of the system'
+  end
+
+  def speakers
+    Speaker.all
   end
 end
