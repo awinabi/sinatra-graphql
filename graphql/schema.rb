@@ -2,7 +2,7 @@ require 'graphql'
 require_relative 'query'
 require_relative 'mutation'
 
-ConferenceAppSchema = GraphQL::Schema.define do
+class ConferenceAppSchema < GraphQL::Schema
   query QueryType
   mutation MutationType
 end
