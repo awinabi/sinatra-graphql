@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'sinatra', '~>2.0.4'
-gem 'sinatra-contrib', '~>2.0.4'
+gem 'sinatra', '~>3.0.4'
+gem 'sinatra-contrib', '~>3.0.4'
 gem 'sinatra-activerecord'
 gem 'graphql', '~>1.8.0'
 gem 'puma'
